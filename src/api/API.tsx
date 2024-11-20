@@ -3,7 +3,7 @@ const searchGithub = async () => {
     const start = Math.floor(Math.random() * 100000000) + 1;
     console.log(import.meta.env);
     const response = await fetch(
-      `https://api.github.com/Liciaav?since=${start}`,
+      `https://api.github.com/users?since=${start}`,
       {
         headers: {
           Authorization: `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`,
@@ -25,7 +25,7 @@ const searchGithub = async () => {
 
 const searchGithubUser = async (username: string) => {
   try {
-    const response = await fetch(`https://api.github.com/Liciaav/${username}`, {
+    const response = await fetch(`https://api.github.com/users/${username}`, {
       headers: {
         Authorization: `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`,
       },

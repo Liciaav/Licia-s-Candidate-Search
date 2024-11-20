@@ -44,7 +44,7 @@ const CandidateSearch: React.FC = () => {
 
       <div className="actions">
         <button onClick={fetchRandomUsers}>Load Random Users</button>
-        {/* <button onClick={() => navigate('/saved')}>Saved Candidates</button> */}
+        <button onClick={() => navigate('/saved')}>Saved Candidates</button>
       </div>
 
       <div className="random-users">
