@@ -18,3 +18,4 @@ const UserCard: React.FC<UserCardProps> = ({ user, onSave }) => {
 };
 
 export default UserCard;
+

@@ -54,15 +54,15 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
+/* button:hover {
   border-color: #646cff;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -73,7 +73,7 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
 
 main {
   color: #fff;
@@ -94,7 +94,7 @@ tbody tr:nth-child(odd) {
   background-color: #333333;
 }
 
-.nav {
+/* .nav {
   display: flex;
   justify-content: flex-start;
   padding: 1em 2em;
@@ -108,7 +108,7 @@ tbody tr:nth-child(odd) {
 .nav-link {
   color: #fff;
   text-decoration: none;
-}
+} */
 
 .active {
   font-weight: 700;
@@ -132,3 +132,26 @@ tbody tr:nth-child(odd) {
   flex-wrap: wrap;
   gap: 20px;
 } */
+
+.search-section{
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 50px;
+}
+
+.actions{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.random-users{
+
+}
+
+.user-card{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}

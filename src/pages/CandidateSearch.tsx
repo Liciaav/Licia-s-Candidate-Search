@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { searchGithub, searchGithubUser } from '../api/API';
 import UserCard from '../components/UserCard';
 import { GitHubUser } from '../interfaces/Candidate.interface';
@@ -7,6 +8,8 @@ const CandidateSearch: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [userData, setUserData] = useState<GitHubUser | null>(null);
   const [randomUsers, setRandomUsers] = useState<GitHubUser[]>([]);
+
+  const navigate = useNavigate();
 
   const fetchRandomUsers = async () => {
     const users = await searchGithub();
@@ -26,7 +29,6 @@ const CandidateSearch: React.FC = () => {
 
   return (
     <div className="candidate-search">
-      <h1>GitHub Candidate Search</h1>
 
       <div className="search-section">
         <input
@@ -38,14 +40,14 @@ const CandidateSearch: React.FC = () => {
         <button onClick={handleSearch}>Search User</button>
       </div>
 
-      {userData && (
-        <UserCard user={userData} onSave={saveUser} />
-      )}
+      {userData && <UserCard user={userData} onSave={saveUser} />}
 
-      <button onClick={fetchRandomUsers}>Load Random Users</button>
+      <div className="actions">
+        <button onClick={fetchRandomUsers}>Load Random Users</button>
+        {/* <button onClick={() => navigate('/saved')}>Saved Candidates</button> */}
+      </div>
 
       <div className="random-users">
-        <h2>Random GitHub Users</h2>
         {randomUsers.map((user) => (
           <UserCard key={user.id} user={user} onSave={saveUser} />
         ))}

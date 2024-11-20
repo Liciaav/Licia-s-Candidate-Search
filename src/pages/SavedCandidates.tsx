@@ -23,3 +23,4 @@ const SavedCandidates: React.FC = () => {
 };
 
 export default SavedCandidates;
+
